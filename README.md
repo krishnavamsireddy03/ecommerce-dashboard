@@ -2,7 +2,7 @@
 
 This is a fully responsive, modern **eCommerce admin dashboard** developed using **React** and **Tailwind CSS**, and deployed with **Cloudflare Pages**. The dashboard simulates real-world analytics and product management for an online shopping platform, making it perfect for learning full-stack deployment.
 
-> ✅ Live Demo: [https://ecommerce-dashboard-52f.pages.dev](https://ecommerce-dashboard-52f.pages.dev)
+> ✅ Live Demo: [https://ecommerce-dashboard-d84.pages.dev](https://ecommerce-dashboard-d84.pages.dev)
 
 ---
 
@@ -96,5 +96,5 @@ Build command: npm run build
 Output folder: build
 
 Visit the live app:
-👉 https://ecommerce-dashboard-52f.pages.dev
+👉 https://ecommerce-dashboard-d84.pages.dev
 
