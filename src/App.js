@@ -1,15 +1,32 @@
-import React from "react";
-import Sidebar from "./components/Sidebar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
+import Products from "./pages/Products";
+import Unauthorized from "./pages/Unauthorized";
+import ProtectedRoute from "./routes/ProtectedRoute";
 
 function App() {
   return (
-    <div className="flex">
-      <Sidebar />
-      <div className="flex-1 p-6 bg-gray-100 min-h-screen">
-        <Dashboard />
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/unauthorized" element={<Unauthorized />} />
+
+        <Route path="/dashboard" element={
+          <ProtectedRoute allowed={["admin", "manager", "employee"]}>
+            <Dashboard />
+          </ProtectedRoute>
+        }/>
+
+        <Route path="/products" element={
+          <ProtectedRoute allowed={["admin"]}>
+            <Products />
+          </ProtectedRoute>
+        }/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
